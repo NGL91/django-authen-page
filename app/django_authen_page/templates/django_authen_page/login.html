@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load bootstrap3 %}
+{% load account socialaccount %}
+{% load staticfiles %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+
+{% block content %}
+{% get_providers as socialaccount_providers %}
+<link rel="stylesheet" href='{% static "css/profile/login.css" %}' type="text/css">
+<div id="application-wrapper" data-controller="application" data-action="login">
+<div class="header-spacer"></div>
+<div id="container" class="haslayout">
+
+  <div class="content haslayout">
+
+    <div class="box">
+      {% if user.is_authenticated %}
+                {% include "account/snippets/already_logged_in.html" %}
+            {% endif %}
+      <header>
+        <h3>
+          Log In
+        </h3>
+        <p>
+          Not a member? <a href="{% url 'account_signup' %}">Create an account</a>.
+        </p>
+      </header>
+      <section>
+        <div class="reg-facebook" data-view="FacebookSignupBox" data-initialized="true">
+          {% include "allauth/account/provider_panel.html" with process="login" %}
+        </div>
+        <p>
+        Or log in below:
+        </p>
+        <div class="login-email">
+          <form class="login-form" method="POST" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            {%bootstrap_field form.login show_label=False%}
+            {%bootstrap_field form.password show_label=False%}
+            {%bootstrap_field form.remember%}
+
+            <!-- {% bootstrap_form form %} -->
+            {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <div style="height:10px;"></div>
+            <div class="form-actions">
+              <p class='forgot-password'>
+                <a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+              </p>
+              <!-- <p class="btn" href=></p> -->
+              <input type="submit" value='{% trans "Log In" %}'></input>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
