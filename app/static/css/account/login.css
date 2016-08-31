@@ -1,0 +1,330 @@
+.header-spacer {
+    height: 50px
+}
+
+.footer_space{
+    border-top: 1px solid black;
+    height: 10px;
+}
+
+.login_page {
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-size: 14px
+}
+
+.login_page #header {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.login_page * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.login_page .box {
+    margin: 0 auto;
+    width: 320px;
+    padding: 20px;
+    position: relative;
+    position: relative
+}
+
+.login_page .box a {
+    color: inherit;
+    text-decoration: underline;
+    outline: none
+}
+
+.login_page .box header {
+    margin-bottom: 22px
+}
+
+.login_page .box header h3 {
+    color: #101010;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px
+}
+
+.login_page .box section .reg-facebook {
+    margin-bottom: 24px
+}
+
+.login_page .box section .reg-facebook button {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+.login_page .box section .login-email {
+    margin: 24px 0
+}
+
+.login_page .box section .login-email .errors {
+    color: #f00;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 120%;
+    margin-bottom: 12px
+}
+
+.login_page .box section .forgot-password {
+    margin-bottom: 28px
+}
+
+.login_page .box input {
+    height: 35px;
+    background: #fff;
+    border: 0;
+    color: #222;
+    font-size: 14px;
+    width: 100%;
+    outline: 2px solid transparent;
+    border-radius: 0;
+    text-transform: none
+}
+
+.login_page .box input[type="text"],
+.login_page .box input[type="password"] {
+    margin-bottom: 15px;
+    text-indent: 7px;
+    padding: 5px;
+    border: 1px solid #dfdfdf
+}
+
+.login_page .box input[type="text"]:focus,
+.login_page .box input[type="password"]:focus {
+    outline: 2px solid #e5e5e5
+}
+
+.login_page .box input[type="text"].error,
+.login_page .box input[type="password"].error {
+    outline: 2px solid #ff6565;
+    border: 0
+}
+
+.login_page .box input[type="text"]::-webkit-input-placeholder,
+.login_page .box input[type="password"]::-webkit-input-placeholder {
+    color: #8f8f8f
+}
+
+.login_page .box input[type="text"]::-moz-placeholder,
+.login_page .box input[type="password"]::-moz-placeholder {
+    color: #8f8f8f
+}
+
+.login_page .box input[type="text"]:-moz-placeholder,
+.login_page .box input[type="password"]:-moz-placeholder {
+    color: #8f8f8f
+}
+
+.login_page .box input[type="text"]:-ms-input-placeholder,
+.login_page .box input[type="password"]:-ms-input-placeholder {
+    color: #8f8f8f
+}
+
+.login_page .box input[type="radio"] {
+    width: 130px;
+    float: left
+}
+
+.login_page .box input[type="submit"] {
+    -webkit-appearance: none;
+    color: white;
+    background: black;
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    width: 280px;
+    height: 47px;
+    outline: none;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: opacity .08s ease-in-out;
+    -moz-transition: opacity .08s ease-in-out;
+    transition: opacity .08s ease-in-out
+}
+
+.login_page .box input[type="submit"]:hover {
+    cursor: pointer;
+    opacity: .8
+}
+
+.login_page .box input[type="submit"][disabled] {
+    opacity: .2;
+    cursor: not-allowed
+}
+
+.login_page .box .genders:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.login_page .box .gender {
+    float: left;
+    text-align: center
+}
+
+.login_page .box .gender label {
+    position: absolute;
+    display: block;
+    width: 130px;
+    height: 35px;
+    color: #8f8f8f;
+    background: #eee;
+    font-size: 14px;
+    padding-top: 11px
+}
+
+.login_page .box .gender input {
+    position: relative;
+    z-index: 5;
+    opacity: 0
+}
+
+.login_page .box .gender input:hover {
+    cursor: pointer
+}
+
+.login_page .box .gender input:checked+label {
+    background: #0bf;
+    color: white
+}
+
+.login_page .box .gender.male {
+    margin-right: 20px
+}
+
+.login_page .box .disclaimer {
+    font-size: 10px;
+    opacity: .5;
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+.login_page .box .input-error-field {
+    position: relative
+}
+
+.login_page .box .error-tooltip {
+    position: absolute;
+    left: 320px;
+    top: 5px;
+    width: 160px;
+    color: white;
+    background: #ff6565;
+    font-size: 12px;
+    line-height: 14px;
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out
+}
+
+.login_page .box .error-tooltip.invisible {
+    opacity: 0;
+    display: none
+}
+
+.login_page .box .error-tooltip>div {
+    position: relative;
+    padding: 6px 10px
+}
+
+.login_page .box .error-tooltip>div:before {
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #ff6565
+}
+
+.login_page .box button {
+    position: relative;
+    color: white;
+    background: #5667af;
+    font-size: 18px;
+    width: 280px;
+    height: 47px;
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    outline: none;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: background .15s ease-in-out;
+    -moz-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out
+}
+
+.login_page .box button i {
+    position: absolute;
+    font-size: 37px;
+    left: 17px;
+    bottom: -5px
+}
+
+.login_page .box button span {
+    margin-left: 38px
+}
+
+.login_page .box button:hover {
+    cursor: pointer;
+    background: #6473b6
+}
+
+@media screen and (max-width:640px) {
+    .login_page input {
+        -webkit-appearance: none;
+        border-radius: 0
+    }
+    .login_page #container {
+        width: auto;
+        min-height: 0;
+        padding: 0
+    }
+    .login_page #header {
+        width: 100%;
+        min-width: 0
+    }
+    .login_page #header .main-nav {
+        background: none
+    }
+    .login_page #header .left-nav,
+    .login_page #header .search,
+    .login_page #header .right-nav {
+        display: none
+    }
+    .login_page #header .container {
+        width: auto;
+        margin: 0 20px
+    }
+    .login_page #footer {
+        width: auto;
+        display: none
+    }
+}
+
+/*.login_page section div.form-group label {
+   display: none;
+}*/
+
+.login_page .box input[type='checkbox']{
+    height: 15px;
+    margin: 2px 0 0 0;
+    
+}
+
+.login_page .box label{
+    padding-left: 0px;
+    color: black;
+}

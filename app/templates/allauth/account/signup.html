@@ -1,0 +1,99 @@
+{% extends "bases/profile_navigation.html" %}
+
+{% load i18n %}
+{% load bootstrap3 %}
+{% load account socialaccount %}
+{% load staticfiles %}
+
+{% block head_title %}{% trans "Signup" %}BS{% endblock %}
+
+{% block body %}
+{% get_providers as socialaccount_providers %}
+<link rel="stylesheet" href='{% static "css/account/registration.css" %}' type="text/css">
+
+<div id="container" class="registration_page">
+
+  <div class="row">
+
+
+    <h2>Join our community!</h2>
+
+    <section class="registration">
+
+      <div class="box reg-facebook" data-view="FacebookSignupBox" data-initialized="true">
+        <h3>Got Facebook?</h3>
+
+        <div class="main">
+          <p>
+            Connecting with Facebook is fast and
+            easy and you can see which of your
+            friends are already using Lookbook.
+          </p>
+          <p>
+            We won't post anything without your
+            permission.
+          </p>
+        </div>
+
+        <form class="register-facebook" action="./register lookbook_files/register lookbook.html" method="POST" data-remote="true">
+          <input type="hidden" name="facebook_access_token">
+        </form>
+
+        {% if socialaccount_providers  %}
+        <div class="col-md-5 col-lg-5">
+          {% include "allauth/account/provider_panel.html" with process="login" %}
+        </div>
+        {% endif %}
+        <!-- <button class="connect">
+          <i class="fa fa-facebook"></i>
+          <span>Connect with Facebook</span>
+        </button> -->
+
+      </div>
+
+      <div class="mid">
+        <div class="or">or</div>
+      </div>
+
+      <div class="box reg-email " data-view="EmailSignupBox" data-initialized="true">
+        <h3>Create your account</h3>
+
+        <form  class="form-actions" id="signup_form" method="post" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          <!-- {% bootstrap_form form %} -->
+          {%bootstrap_field form.email%}
+          {%bootstrap_field form.password1%}
+          {%bootstrap_field form.password2%}
+
+          <div id="id_gender">
+      
+            <div class="genders">
+                <div class="gender male">
+                  <input type="radio" name="gender" id="id_gender_0" required="required"  value="male">
+                  <label for="gender-male">male</label>
+                </div>
+
+                <div class="gender female">
+                  <input type="radio" name="gender" id="id_gender_1" required="required" value="female">
+                  <label for="gender-female">female</label>
+                </div>
+              </div>
+          </div>
+
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <div style="height:10px;"></div>
+          <div class="form-actions">
+            <input type="submit" value='{% trans "Create an account" %}'></input>
+          </div>
+        </form>
+
+        
+      </div>
+    </section>
+
+  </div>
+
+
+{% endblock %}

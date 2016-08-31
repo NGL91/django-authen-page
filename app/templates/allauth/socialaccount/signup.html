@@ -1,0 +1,42 @@
+{% extends "bases/profile_navigation.html" %}
+
+{% load i18n %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href='{% static "css/profile/registration.css" %}' type="text/css">
+<div id="application-wrapper" data-controller="application" data-action="login">
+<div class="header-spacer"></div>
+<div id="container" class="haslayout">
+
+  <div class="content haslayout">
+
+    <div class="box">
+    	<br>
+		<h1>{% trans "Sign Up" %}</h1>
+		<br>
+		<p>{% blocktrans with provider_name=account.get_provider.name site_name=site.name %}You are about to use your {{provider_name}} account to login to 
+		{{site_name}}. As a final step, please complete the following form:{% endblocktrans %}</p>
+		 <br>
+		<form class="signup" id="signup_form" method="post" action="">
+		  {% csrf_token %}
+		  {% bootstrap_form form %}
+		
+		  {% if redirect_field_value %}
+		  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+		  {% endif %}
+		  <br>
+		  <div class="form-actions">
+		  <button class="btn btn-primary"  type="submit">{% trans "Sign Up" %}</button>
+		  </div>
+		</form>
+	</div>
+</div>
+        
+
+{% endblock %}
+
+

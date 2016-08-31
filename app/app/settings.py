@@ -28,16 +28,41 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Application definition
+LIBS = (# 'rest_framework',
+        # 'rest_framework.authtoken',
+        # 'tinymce',
 
+        'allauth',
+        'allauth.account',
+        #social authentication
+        'allauth.socialaccount',
+        'allauth.socialaccount.providers.facebook',  
+        'bootstrap3', # optional module for making bootstrap forms easier
+        # 'lib_awesome_avatar',
+        # 'easy_pjax',
+         # 'rest_auth',
 
-INSTALLED_APPS = [
+        # 'rest_auth.registration',
+
+        # 'corsheaders'
+        'django_extensions',
+        )
+
+LOCAL_APPS = (#'django_authen_page',
+              'django_authen_page.apps.DjangoAuthenPageConfig',
+             )
+
+INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-] 
+    #Raise error if missing this app
+    'django.contrib.sites',
+) + LIBS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,21 +77,21 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'app.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 'django.template.context_processors.debug',
+#                 'django.template.context_processors.request',
+#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.messages.context_processors.messages',
+#             ],
+#         },
+#     },
+# ]
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
@@ -130,7 +155,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates'),
-                 # os.path.join(BASE_DIR, 'templates', 'allauth'),
+                 os.path.join(BASE_DIR, 'templates', 'allauth'),
                  ]
         ,
         'APP_DIRS': True,
@@ -149,6 +174,24 @@ TEMPLATES = [
 ]
 
 
+#Allauth config
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+    # `allauth` specific authentication methods, such as login by e-mail
+    "allauth.account.auth_backends.AuthenticationBackend"
+)
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_USERNAME_MIN_LENGTH = 3
+# ACCOUNT_EMAIL_VERIFICATION = 'none'  # testing...
+# ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+SOCIALACCOUNT_AUTO_SIGNUP = False  # require social accounts to use the signup form ... I think
+
+SITE_ID=1
 
 print 'BASE_DIR=',BASE_DIR
 print '\n\n TEMPLATES=',TEMPLATES,'\n\n'
@@ -157,3 +200,5 @@ print '\n\n TEMPLATES=',TEMPLATES,'\n\n'
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 print 'PROJECT_ROOT=',PROJECT_ROOT
+
+print 'STATICFILES_DIRS=',STATICFILES_DIRS

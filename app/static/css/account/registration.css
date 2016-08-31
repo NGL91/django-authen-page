@@ -1,0 +1,503 @@
+/*
+.header-spacer {
+    height: 50px
+}*/
+
+body{
+    padding-bottom: 0px !important;
+}
+
+.registration_page {
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif
+}
+
+.registration_page * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.registration_page .lightbox {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.registration_page .lightbox * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.registration_page input {
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif
+}
+
+.registration_page #header {
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.registration_page #container {
+    background: none;
+    min-height: 0
+}
+
+.registration_page #footer {
+    border: 0;
+    font-size: 13px;
+    width: 980px;
+    margin: 60px auto 0;
+    color: #fff
+}
+
+.registration_page #footer .hor_rule {
+    display: none
+}
+
+.registration_page #footer a {
+    color: #fff
+}
+
+.registration_page #footer a:hover {
+    color: inherit;
+    background: inherit;
+    text-decoration: underline;
+    opacity: .75
+}
+
+.registration_page {
+    background-color: black;
+    background-image: url(../../../static/img/big_fashion_image.jpg);
+    background-size: cover;
+    background-position: 50% 0px;
+    background-repeat: no-repeat;
+    min-width: 100px;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    /*float:left; expand to all screen*/
+}
+
+.registration_page h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+    margin: 75px 0 90px;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.registration_page section.registration {
+    margin: 0 auto;
+    width: 820px
+}
+
+.registration_page section.registration:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.registration_page section.registration>div {
+    float: left
+}
+
+.registration_page section.registration .box {
+    width: 320px;
+    height: 360px;
+    padding: 20px;
+    background: white;
+    position: relative
+}
+
+.registration_page section.registration .box h3 {
+    color: #101010;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 22px
+}
+
+.registration_page section.registration .box.reg-facebook p {
+    color: #333;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px
+}
+
+.registration_page section.registration .box .main {
+    padding: 0;
+}
+
+.registration_page section.registration .box.reg-facebook button {
+    position: relative;
+    color: white;
+    background: #5667af;
+    font-size: 18px;
+    width: 280px;
+    height: 47px;
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    outline: none;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: background .15s ease-in-out;
+    -moz-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out
+}
+
+.registration_page section.registration .box.reg-facebook button i {
+    position: absolute;
+    font-size: 37px;
+    left: 17px;
+    bottom: -5px
+}
+
+.registration_page section.registration .box.reg-facebook button span {
+    margin-left: 38px
+}
+
+.registration_page section.registration .box.reg-facebook button:hover {
+    cursor: pointer;
+    background: #6473b6
+}
+
+.registration_page section.registration .box.reg-facebook button {
+    /*position: absolute;*/
+    left: -15px;
+    /*bottom: 20px*/
+}
+
+.registration_page section.registration .box.reg-email {
+    position: relative
+}
+
+.registration_page section.registration .box.reg-email input {
+    height: 35px;
+    background: #fff;
+    border: 0;
+    color: #222;
+    font-size: 14px;
+    width: 100%;
+    outline: 2px solid transparent;
+    border-radius: 0;
+    text-transform: none
+}
+
+.registration_page section.registration .box.reg-email input[type="text"],
+.registration_page section.registration .box.reg-email input[type="password"] {
+    margin-bottom: 15px;
+    text-indent: 7px;
+    padding: 5px;
+    border: 1px solid #dfdfdf
+}
+
+.registration_page section.registration .box.reg-email input[type="text"]:focus,
+.registration_page section.registration .box.reg-email input[type="password"]:focus {
+    outline: 2px solid #e5e5e5
+}
+
+.registration_page section.registration .box.reg-email input[type="text"].error,
+.registration_page section.registration .box.reg-email input[type="password"].error {
+    outline: 2px solid #ff6565;
+    border: 0
+}
+
+.registration_page section.registration .box.reg-email input[type="text"]::-webkit-input-placeholder,
+.registration_page section.registration .box.reg-email input[type="password"]::-webkit-input-placeholder {
+    color: #8f8f8f
+}
+
+.registration_page section.registration .box.reg-email input[type="text"]::-moz-placeholder,
+.registration_page section.registration .box.reg-email input[type="password"]::-moz-placeholder {
+    color: #8f8f8f
+}
+
+.registration_page section.registration .box.reg-email input[type="text"]:-moz-placeholder,
+.registration_page section.registration .box.reg-email input[type="password"]:-moz-placeholder {
+    color: #8f8f8f
+}
+
+.registration_page section.registration .box.reg-email input[type="text"]:-ms-input-placeholder,
+.registration_page section.registration .box.reg-email input[type="password"]:-ms-input-placeholder {
+    color: #8f8f8f
+}
+
+.registration_page section.registration .box.reg-email input[type="radio"] {
+    width: 130px;
+    float: left
+}
+
+.registration_page section.registration .box.reg-email input[type="submit"] {
+    -webkit-appearance: none;
+    color: white;
+    background: black;
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    width: 280px;
+    height: 47px;
+    outline: none;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: opacity .08s ease-in-out;
+    -moz-transition: opacity .08s ease-in-out;
+    transition: opacity .08s ease-in-out
+}
+
+.registration_page section.registration .box.reg-email input[type="submit"]:hover {
+    cursor: pointer;
+    opacity: .8
+}
+
+.registration_page section.registration .box.reg-email input[type="submit"][disabled] {
+    opacity: .2;
+    cursor: not-allowed
+}
+
+.registration_page section.registration .box.reg-email .genders:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.registration_page section.registration .box.reg-email .gender {
+    float: left;
+    text-align: center
+}
+
+.registration_page section.registration .box.reg-email .gender label {
+    position: absolute;
+    display: block;
+    width: 130px;
+    height: 35px;
+    color: #8f8f8f;
+    background: #eee;
+    font-size: 14px;
+    padding-top: 11px
+}
+
+.registration_page section.registration .box.reg-email .gender input {
+    position: relative;
+    z-index: 5;
+    opacity: 0
+}
+
+.registration_page section.registration .box.reg-email .gender input:hover {
+    cursor: pointer
+}
+
+.registration_page section.registration .box.reg-email .gender input:checked+label {
+    background: #0bf;
+    color: white
+}
+
+.registration_page section.registration .box.reg-email .gender.male {
+    margin-right: 20px
+}
+
+.registration_page section.registration .box.reg-email .disclaimer {
+    font-size: 10px;
+    opacity: .5;
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+.registration_page section.registration .box.reg-email .input-error-field {
+    position: relative
+}
+
+.registration_page section.registration .box.reg-email .error-tooltip {
+    position: absolute;
+    left: 320px;
+    top: 5px;
+    width: 160px;
+    color: white;
+    background: #ff6565;
+    font-size: 12px;
+    line-height: 14px;
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out
+}
+
+.registration_page section.registration .box.reg-email .error-tooltip.invisible {
+    opacity: 0;
+    display: none
+}
+
+.registration_page section.registration .box.reg-email .error-tooltip>div {
+    position: relative;
+    padding: 6px 10px
+}
+
+.registration_page section.registration .box.reg-email .error-tooltip>div:before {
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #ff6565
+}
+
+.registration_page section.registration .box.reg-email.show-captcha {
+    height: 520px
+}
+
+.registration_page section.registration .box.reg-email #recaptcha_widget {
+    margin-top: 20px
+}
+
+.registration_page section.registration .box.reg-email #recaptcha_widget #recaptcha_image {
+    width: 280px
+}
+
+.registration_page section.registration .box.reg-email #recaptcha_widget #recaptcha_response_field {
+    margin-top: 5px
+}
+
+.registration_page section.registration .box.reg-email .error-tooltip.password {
+    top: -3px
+}
+
+.registration_page section.registration .box.reg-email .error-tooltip.password.two-lines>div:before {
+    top: 12px
+}
+
+.registration_page section.registration .box.reg-email .error-tooltip.captcha {
+    top: 8px
+}
+
+.registration_page section.registration .box.reg-email .bottom {
+    position: absolute;
+    left: 20px;
+    bottom: 20px
+}
+
+.registration_page section.registration div.form-group label {
+   display: none;
+}
+
+.registration_page section.registration .mid {
+    width: 180px
+}
+
+.registration_page section.registration .or {
+    display: block;
+    color: white;
+    border-radius: 99px;
+    border: 2px solid white;
+    width: 54px;
+    height: 54px;
+    font-size: 22px;
+    padding-top: 15px;
+    margin: 135px auto 0;
+    text-align: center;
+    font-weight: 600;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+@media screen and (max-width:640px) {
+    .registration_page input {
+        -webkit-appearance: none;
+        border-radius: 0
+    }
+    .registration_page #container {
+        width: auto;
+        min-height: 0;
+        padding: 0
+    }
+    .registration_page #header {
+        width: 100%;
+        min-width: 0
+    }
+    .registration_page #header .main-nav {
+        background: none
+    }
+    .registration_page #header .left-nav,
+    .registration_page #header .search,
+    .registration_page #header .right-nav {
+        display: none
+    }
+    .registration_page #header .container {
+        width: auto;
+        margin: 0 20px
+    }
+    .registration_page #footer {
+        width: auto;
+        display: none
+    }
+    .registration_page .container {
+        background-image: url(../../../static/images/big_fashion_image.jpg); /*url(//lbstatic.nu/assets/register/gabriel_darker_640.jpg);*/
+        min-width: 0
+    }
+    .registration_page h2 {
+        width: 280px;
+        font-size: 26px;
+        padding: 20px 0;
+        margin: 0 auto;
+        line-height: 32px;
+        text-align: left
+    }
+    .registration_page section.registration {
+        width: auto
+    }
+    .registration_page section.registration>div {
+        float: none
+    }
+    .registration_page section.registration .mid {
+        display: none
+    }
+    .registration_page section.registration .box {
+        margin: 0 auto;
+        height: auto
+    }
+    .registration_page section.registration .box.reg-facebook h3,
+    .registration_page section.registration .box.reg-facebook .main {
+        display: none
+    }
+    .registration_page section.registration .box.reg-facebook button {
+        position: relative;
+        bottom: auto;
+        left: -15px;
+    }
+    .registration_page section.registration .box.reg-email .error-tooltip {
+        left: 142px
+    }
+    .registration_page section.registration .box.reg-email .error-tooltip.password {
+        top: -2px;
+        height: 39px
+    }
+    .registration_page section.registration .box.reg-email .error-tooltip.genders {
+        position: static;
+        margin: 3px auto 0;
+        text-align: center
+    }
+    .registration_page section.registration .box.reg-email .error-tooltip.genders>div:before {
+        display: none
+    }
+    .registration_page section.registration .box.reg-email .bottom {
+        position: static;
+        left: auto;
+        bottom: auto
+    }
+
+    .registration_page .container {
+        display: none;
+        /*position: relative;*/
+        /*width: auto*/
+    }
+}
